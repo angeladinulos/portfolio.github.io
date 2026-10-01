@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>angeladinulos_portfolio/sqlproject</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>WORKS</strong></a>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/mary-angela-dinulos" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Analyzing Layoffs - Data Cleaning and EDA in MySQL</h1>
+									</header>
+
+									<span class="image main"><img src="SQL part photos/photo sql hehe.jpg" alt="" /></span>
+
+									<p>This MySQL Project analyzes data on layoffs worldwide. The dataset contains columns namely: company, location, industry, total number of people laid off, its percentage, date, current stage of the company (Post-IPO, Series B, Acquired, etc.), country, and amount of funds raised by the company. This is a guided project from Alex The Analyst on his Data Analyst Bootcamp. </p>
+									<p>This project starts from the process of data cleaning and proceeds to exploratory data analysis using MySQL. The photo below shows a portion of the raw data.</p>
+
+                                    <span class="image main"><img src="SQL part photos/a.PNG" alt="" /></span>
+
+									<hr class="major" />
+
+									<h2>Data Cleaning Process</h2>
+									<p>We start by creating a data “sandbox” or a copy of the raw data. This is where we work with data cleaning and data analysis, where we can work without disrupting the original data. This also helps with recovery in case of mistakes and when we want to trace back on the changes created in the dataset.</p>
+                                </ul>
+                                    <span class=""image main"><img src="SQL part photos/b.PNG" alt=""/><span>
+                                    <p></p>
+                                    <p><strong>Step 1: Remove Duplicates</strong></p>
+									<p>In the case of this data set, there is no identification number for the companies so a number was assigned for each company over the all columns that should be unique among each entry. This makes it easier to identify the duplicates. The rows with the number greater than 1 indicate that there is a duplicate of that particular column. </p>
+
+                                    <span class=""image main"><img src="SQL part photos/c.PNG" alt=""/><span></span>
+                                    <p></p>
+                                    <span class=""image main"><img src="SQL part photos/d.PNG" alt=""/><span></span>
+								    <p></p>
+
+                                    <p> To remove duplicates, another staging table was created using “Create Statement” and inserting the data from the first staging table. This table is called and uses the delete function. This is done because the delete function is not applicable for a Common Table Expression (CTE) in MySQL that will update the first staging table. </p>
+                                    <span class=""image main"><img src="SQL part photos/e1.PNG" alt=""/><span></span>
+                                    <span class=""image main"><img src="SQL part photos/e2.PNG" alt=""/><span></span>
+                                    
+                                    <p></p>
+
+                                    <p><strong>Step 2: Standardize Data</strong></p>
+                                    <p>Detects issues in the format, spelling, spacing etc. in the data and fixes it. All columns were briefly scanned to identify potential issues before changes were implemented. In this section, the following SQL functions are used. </p>
+                                    <p>“TRIM” was used to remove unnecessary white spaces in the names. </p>
+                                    <p></p>
+                                    <span class=""image main"><img src="SQL part photos/f.PNG" alt=""/><span></span>
+                                    <p></p>
+                                    <p>The function “%” was used to find names, particularly in the industry column, and update names using the “UPDATE” function so they can be consistent throughout the dataset. </p>
+                                    <span class=""image main"><img src="SQL part photos/g.PNG" alt=""/><span></span>
+                                    <p></p>
+                                    <p>Little details such as the extra dots were trimmed from several data items in the data set. </p>
+                                    <span class=""image main"><img src="SQL part photos/h.PNG" alt=""/><span></span>
+                                    <p></p>
+                                    <p>To do a time series date, the date was transformed to the date format from text using the string below: </p>
+                                    <span class=""image main"><img src="SQL part photos/i.PNG" alt=""/><span></span>
+                                    <p></p>
+
+                                    <p><strong>Step 3: Find Null Values and Remove Colums or Rows</strong></p>
+                                    <p></p>
+                                    <p>Try to populate the blank values by checking other rows or companies that are in the similar category (eg. Airbnb — Travel Industry). For other values that cannot be populated because there is not enough data (eg. total laid off, funds raised, etc.), these columns or data can be removed if justified that it is not needed in your analysis.</p>
+                                    <span class=""image main"><img src="SQL part photos/j.PNG" alt=""/><span></span>
+                                    <span class=""image main"><img src="SQL part photos/k.PNG" alt=""/><span></span>
+
+          
+                                    <p></p>
+
+									<h2>Exploratory Data Analysis</h2>
+									<p>For EDA, I started with analyzing maximum amounts for the total number of layoffs and percentage layoffs. 
+                                        Part of the analysis includes grouping by company or industry according to number of layoffs. 
+                                        Additionally, the progression of layoffs per year and the total rolling total per month was analyzed through the substring function in MySQL. 
+                                    </p>
+									<p>Access the full code through this link:</p>
+                                    <ul class="actions">
+												<li><a href="https://github.com/angeladinulos/Layoffs-Project/blob/main/SQL%20PROJECT%20(EDA)" class="button">View Full EDA Code</a></li>
+											</ul>
+
+									<hr class="major" />
+
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										
+										<li>
+											<span class="opener">Works</span>
+											<ul>
+												<li><a href="sql project.html">Analyzing Layoffs - Data Cleaning and EDA in MySQL</a></li>
+												<li><a href="bikesales.html">Bike Sales - Data Analytics in Excel</a></li>
+												<li><a href="airbnbproject.html">AIRBNB Seattle Data Visualization In Tableau</a></li>
+												<li><a href="deloitte.html">Deloitte Data Analytics Job Simulation</a></li>
+												</ul>
+													
+												</li>
+									</ul>
+								</nav>
+
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Please contact me through any of the following.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">angeladinulos@gmail.com</a></li>
+										<li class="icon solid fa-phone">(+34) 637 85 45 93</li>
+										<li class="icon solid fa-home">Philippines | Spain<br />
+										</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>angeladinulos_portfolio/airbnbproject</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>WORKS</strong></a>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/mary-angela-dinulos" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>AIRBNB Seattle Data Visualization in Tableau</h1>
+									</header>
+
+									<span class="image main"><img src="images/airbnb_header.jpg" alt="" /></span>
+
+									<p>For this project, I made a hypothetical situation of a client. The client is a Seattle-based real estate investor who recently purchased a second property in Capitol Hill neighborhood.</p>
+									<p>The client has been thinking about listing it on Airbnb instead of doing a traditional long-term rental. Unsure of his decision, the client wants to know if it is the right move considering its profitability and also how to maximize returns.</p>
+									<p>Specifically, the client wants to answer the following:<br>
+										1. Is rental via Airbnb profitable in Seattle?<br>
+										2. Which neighborhoods command the highest prices?<br>
+										3. What type of property and host profile performs best?<br>
+										4. How should he price his listing to stay competitive?<br>
+									</p>
+									
+									<hr class="major" />
+
+									<h2>Process</h2>
+									<p><strong>Step 1: Data</strong></p>
+										<p>The first thing to do is to look at your data. I imported the dataset to Excel and took a look at its contents so I can identify and locate the needed information.
+											Based on the client's business problem, I have identified key information needed to spot in the dataset, namely: PRICE, NEIGHBORHOODS, ROOM TYPES, BEDROOMS, HOST PROFILE and, LISTINGS. 
+										</p>
+									<p><strong>Step 2: Inner Join</strong></p>
+										<p>Once I spot these details, I know only know the specific sheets I needed for the data visualization. I imported the files to Tableau and did an inner join on the sheets (1) Listings and (2) Calendar.
+											Listings show the details of the property, its host, and the price per night. While the calendar sheet shows the specific dates when the rooms were occupied and for how much it was rented for. I joined both sheets by the listings ID.
+										</p>
+										<span class="image main"><img src="images/4-inner join.PNG" alt="" /></span>
+
+									<p><strong>Step 3: Visualize</strong></p>
+										<p>The first graph shows an average price of listings per neighbourhood. I set it up as a filter to allow for navigation on specific neighborhoods.
+											On the bottom left is a summary of total active listings, average nightly price, and annual revenue. 
+											The graph on the upper right is the average revenue per week in 2016. this gives a snapshot of the potential revenue for the client to easily see. 
+											The bar graph in the bottom center presents the average price by number of bedrooms. Then on the bottom right is the room types and a pie graph of the distribution of superhosts and non-superhosts.
+										</p>
+								
+
+
+
+									<hr class="major" />
+
+									<h2>Dashboard</h2>
+									<span class="image main"><img src="images/airbnb_dashboard.png" alt="" /></span>
+									<p>Filters:<br>
+										1. Listings by neighbourhood<br>
+										2. Avg price by No. of bedrooms<br>
+										3. Superhost and Non-Superhost<br>
+
+									<ul class="actions">
+												<li><a href="https://public.tableau.com/views/AirbnbSeattleDataAnalyticsProject/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" class="button">View in Tableau</a></li>
+											</ul>
+
+									<hr class="major" />
+
+									<h2>Insights</h2>
+									<p>Generally, the average revenue of the 2,873 active listings in 2016 is at around $140 with majority of listings offering entire home or apartment rentals.
+                                       Highest average of revenues occur in the month of July, specifically in the first week. The neighborhood that command the highest prices is Queen Anne neighborhood. Furthermore, most of the hosts with active listings are classified as non-superhosts. <br>
+									   <br>
+									   In case of the hypothetical client, I focused on looking at the data for Capitol Hill Neighborhood. It has a total of 330 active listings. 
+									   <br>
+										<br>
+									   <strong>Profitability</strong><br>
+									   <br>
+									   <span class="image main"><img src="images/capitol hill.PNG" alt="" /></span>
+										Capitol Hill has a higher average revenue compared to the general average (Avg. Revenue = $140). Among the 15 neighborhoods, Capitol Hill ranks 6th with the highest average price. 
+										<br>
+										<br>
+										<br>
+										<strong>Property Type</strong><br>
+										<br>
+										<span class="image main"><img src="images/6 bedrooms.PNG" alt=""/></span>
+										226 of the active listings rent out the entire home or apartment. 90 rents out a private room and the rest rents a shared room.<br>
+										Most of the listings only offer 1 bedroom. There are only 3 and 2 listings for properties with 5 and 6 bedrooms respectively.
+										Particularly, the average price of a room in a 6-bedroom property is at least 12% higher than the average price of a room in a 1-bedroom property.
+										<br>
+										<br>
+										<br>
+										<strong>Superhost vs. Non-Superhost</strong><br>
+										<br>
+										<span class="image main"><img src="images/superhost.PNG" alt=""/></span>
+										Majority of the hosts are non-superhosts. The superhosts are able to charge a greater price for their listings. In terms of revenue, the superhosts have an 26% higher average revenue compared to non-superhosts annually.
+										This can be a great differentiator for the client with a property in Capitol Hill.
+									</p>
+									<hr class="major" />
+
+									<h2>Recommendations</h2>
+									<p><strong>Property Type.</strong> While we do need more details of the property itself and further analysis of demand, it is recommended for the client to list properties with lesser competition such as properties with more bedrooms (5 or 6).<br>
+										<br>
+										
+										<strong>Pricing.</strong> If the client decides to rent out a property with higher number of bedrooms, the client can take on a value-based pricing emphasizing on qualities such as newness of the property, interior design, and amenities.
+										Meanwhile, if the client decides to rent out a property with several competitors like the 1-bedroom homes or apartments, a penetration pricing strategy might be more appropriate in order to get a foothold among the active listings. <br>
+										<br>
+										<strong>Future Recommendations.</strong> It is recommended to further analyze the market of rentals in each area in terms of buying behaviors, geographical factors, and demand. Furthermore, it would be ideal to look at neighborhoods with lesser listings and determine if there is demand before buying a property.
+									</p>
+
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										
+										<li>
+											<span class="opener">Works</span>
+											<ul>
+												
+												<li><a href="sql project.html">Analyzing Layoffs - Data Cleaning and EDA in MySQL</a></li>
+												<li><a href="bikesales.html">Bike Sales - Data Analytics in Excel</a></li>
+												<li><a href="airbnbproject.html">AIRBNB Seattle Data Visualization In Tableau</a></li>
+												<li><a href="deloitte.html">Deloitte Data Analytics Job Simulation</a></li>
+												</ul>
+													
+												</li>
+									</ul>
+								</nav>
+
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Please contact me through any of the following. </p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">angeladinulos@gmail.com</a></li>
+										<li class="icon solid fa-phone">(+34) 637 85 45 93</li>
+										<li class="icon solid fa-home">Philippines | Spain<br />
+										</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

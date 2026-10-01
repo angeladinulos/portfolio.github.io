@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>angeladinulos_portfolio/bikesalesproject</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>WORKS</strong></a>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/mary-angela-dinulos" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Bike Sales - Data Analytics Project in Excel</h1>
+									</header>
+
+									<span class="image main"><img src="SQL part photos/b7.jfif" alt="" /></span>
+
+									<p>This project solely uses Microsoft Excel for data cleaning, formulas, pivot tables and charts, and slicers. The dataset shows bike buyers customer data with 1,026 raw records. It was reduced to 1,000 records after cleaning. This project aims to identify which customer characteristics are linked to buying a bike through an interactive dashboard.</p>
+									<p>A bike retailer wants to understand who buys its bikes. The dataset contains one row per customer with demographic, financial, and lifestyle information plus a final column showing whether the customer purchased a bike or not.</p>
+									<span class="image main"><img src="SQL part photos/b1.PNG" alt="" /></span>
+									<p><strong>Specifically, these are the business questions I want to answer.</strong><br>
+										1. Does income differ between customers who bought a bike and those who didn't?<br>
+										2. Does commute distance influence whether someone buys a bike?<br>
+										3. Which age group buys the most bikes?<br>
+									</p>
+
+									<hr class="major" />
+
+									<h2>Process</h2>
+                                    <span class="image main"><img src="SQL part photos/b2.PNG" alt="" /></span>
+									
+									<p><strong>Step 1: Make a duplicate</strong><br></p>
+								
+									<p>The original data was kept untouched in the "bike_buyers" sheet and copied it into a separate working sheet where I will do all the cleaning. This way, I can trace back to the source and verify the changes that are made.</p>
+
+									<p><strong>Step 2: Inspect the data</strong><br></p>
+								
+									<p>Before changing anything, I reviewed the structure, columns, and value ranges through the filter function. i checked every column for missing values and inconsistent labels. no blank cells were found but there are some duplicate records and inconsistencies in some of the data.</p>
+
+									<p><strong>Step 3: Remove duplicates</strong><br></p>
+									<p>The raw data had <strong>26 duplicate records</strong>. Using Excel's Remove Duplicates function, I deleted the duplicates resulting in 1,000 unique bike customers removing 26 duplicate customer IDs.</p>
+
+									<p><strong>Step 4: Standardize and relabel values</strong></p>
+									<p>Several columns used abbreviations that might make charts confusing. I replaced them with clear labels. Refer to the table below for the summary of the implemented changes.</p>
+									<span class="image main"><img src="SQL part photos/z.PNG" alt="" /></span>
+
+									<p><strong>Step 5: Create new column: Age Brackets</strong></p>
+									<p>I grouped the customers into age brackets instead of analyzing per individual age of each of the 1,000 customers. I used the IF formula in Excel. The "Invalid" label is added to flag blank or bad values.<br>
+									<strong>=IF(L2>55,"Old",IF(L2>30,"Middle Age",IF(L2>17,"Young Adult",IF(L2<=17,"Minor","Invalid"))))</strong></p>
+
+                                    <span class="image main"><img src="SQL part photos/z1.PNG" alt="" /></span>
+
+									<p><strong>Step 6: Build Pivot Tables</strong></p>
+									<p>With the clean data, I built three pivot tables to answer the business questions.</p>
+									<span class="image main"><img src="SQL part photos/z2.PNG" alt="" /></span>
+									<span class="image main"><img src="SQL part photos/b41.PNG" alt="" /></span>
+									<span class="image main"><img src="SQL part photos/b5a.PNG" alt="" /></span>
+									<span class="image main"><img src="SQL part photos/b41.PNG" alt="" /></span>
+									<hr class="major" />
+
+									<h2>Dashboard and Insights</h2>
+									<span class="image main"><img src="SQL part photos/b6.PNG" alt="" /></span>
+									<p><strong>1. Bike buyers earn more on average.</strong> Customers who bought a bike had a higher average income ($57,963) than those who didn't ($54,875), which is about 5.6% higher. Male buyers also average more than female buyers. Income is associated with buying but the gap is modest.</p>
+									<p><strong>2. Shorter commutes mean more bike buyers.</strong> The 0-1 mile gorup has the most buyers (200 of 481). beyond 5 miles, the purchase rate falls with 39.6% at 5-10 miles and 29.7% beyond 10 miles. the 2-5 mile group is the exception and has the highest purchase rate suggesting that it is the common commute for those buying bikes.</p>
+									<p><strong>3. Middle-aged customers are the core market.</strong> Customers aged 31-55 account for 388 of the 481 buyers and they have a 54% purchase rate. Young adults, on the other hand, have 35.5% and older customers have a purchase rate of 31.6%.</p>
+									<p><strong>Additional Findings</strong></p>
+									<strong>Region:</strong> The Pacific region has the highest purchase followed by Europe and then North America.<br>
+									<strong>Marital status:</strong> Single customers buy more often than married customers.<br>
+									<strong>Education:</strong> Customers with Bachelors or a Graduate Degree buy more often than those with only partial high school.<br>
+									<strong>Cars owned:</strong> Customers with 0 or 1 car buy at 57% to 61% versus about 36% for those with more than 2 cars.<br>
+									<strong>Gender:</strong> Gender is not a meaningful factor since purchase rates of females and males are nearly the same.</p>
+
+									<hr class="major" />
+
+									<h2>Recommendations</h2>
+									<p><strong>1. Target marketing</strong> to customers ages 31 to 55 and who live within 5 miles of work.<br>
+									<strong>2. Prioritize the Pacific region</strong> for campaigns since it converts the most sales.<br>
+							        <strong>3. Position bikes as a commuting alternative</strong> for households that have no cars.<br>
+									<strong>4. Consider outreach programs</strong> for new segments that are yet to be tapped.
+								</p>
+									
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+					
+										<li>
+											<span class="opener">Works</span>
+											<ul>
+												<li><a href="sql project.html">Analyzing Layoffs - Data Cleaning and EDA in MySQL</a></li>
+												<li><a href="bikesales.html">Bike Sales - Data Analytics in Excel</a></li>
+												<li><a href="airbnbproject.html">AIRBNB Seattle Data Visualization In Tableau</a></li>
+												<li><a href="deloitte.html">Deloitte Data Analytics Job Simulation</a></li>
+												</ul>
+													
+											
+												</li>
+									</ul>
+								</nav>
+
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Please contact me through any of the following.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">angeladinulos@gmail.com</a></li>
+										<li class="icon solid fa-phone">(+34) 637 85 45 93</li>
+										<li class="icon solid fa-home">Philippines | Spain<br />
+										</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

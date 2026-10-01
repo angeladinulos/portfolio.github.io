@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>angeladinulos_portfolio/airbnbproject</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>WORKS</strong></a>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/mary-angela-dinulos" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Deloitte Data Analytics Job Simulation</h1>
+									</header>
+
+									<span class="image main"><img src="SQL part photos/c1.png" alt="" /></span>
+
+									<p>In this simulation, Daikibo's leadership wanted answers to two questions:</p>
+									<p>
+										<strong>1. Operations: </strong>Where and on which machines are the factories losing production time to downtime?<br>
+										<strong>2. People: </strong>Are the employees treated fairly across factories and job levels?
+									</p>
+									
+									<hr class="major" />
+
+									<h2>Process</h2>
+									<p><strong>Step 1: Import and load the data</strong></p>
+										<p>I connected Tableau to the telemetry file and selected all schema levels. This flattened the nested JSON into a useful table. I used Automatically Update so Tableau populated the table than opened a worksheet to start building charts. Shown below is the full raw data table.</p>
+                                    <span class="image main"><img src="SQL part photos/sheesh.PNG" alt="" /></span>
+
+									<p><strong>Step 2: Create calculated field to measure downtime</strong></p>
+										<p>The raw data only has a text status, so I created a numeric measure labeled as "Unhealthy."<BR>
+											<br>
+										<strong>IF [Status] = "unhealthy" THEN 10 ELSE 0 END</strong><br>
+										<br>
+										Every unhealthy message counts as 10 minutes of downtime and every healthy counts as 0. summing this field gives total downtime in minutes.</p>
+										
+
+									<p><strong>Step 3: Build Charts: Downtime per Factory and Downtime per Device Type</strong></p>
+
+									<span class="image main"><img src="SQL part photos/Factory with the most down time.PNG" alt="" /></span>
+
+										<p>I created a new dashboard and placed the factory chart on top and the device-type chart below it. I then set the factory chart to Use as Filter. Clicking a factory updates the device-type chart 
+											to show only the factory's machines, so a viewer can directly see on which factory or machine in one click.
+											Furthermore, I also sorted the bars from highest to lowest. 
+										</p>
+
+									<hr class="major" />
+
+									<h2>Insights and Conclusion</h2>
+									
+									<p><strong>Downtime Insights</strong><br>
+										<strong>1. Seiko has the most downtime.</strong> It has about 480 minutes or about 8 hours of downtime followed closely by Shenzhen at about 420. Together these two factories account for roughly 90% of all downtime while Meiyo and Berlin contribute little.<br>
+										<strong>2. One machine type explain Seiko's problem. </strong>When Seiko is selected on the dashboard, the Laser Welder accounts for the entire 480 minutes and every other machine type shows 0.<br>
+										<strong>3. Shenzhen's problem is also concentrated.</strong> In the simulation, the Laser Cutter is the dominant source with only small amounts from CNC, Conveyor Belt and Spot Welder.<br>
+                                        <strong>4. Laser Welders and Laser Cutters are the top two sources of downtime.</strong></p>
+									
+
+									<hr class="major" />
+
+									<h2>Certificate</h2>
+									<span class="image main"><img src="SQL part photos/deloitte1.PNG" alt="" /></span>
+									
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										
+										<li>
+											<span class="opener">Works</span>
+											<ul>
+												
+												<li><a href="sql project.html">Analyzing Layoffs - Data Cleaning and EDA in MySQL</a></li>
+												<li><a href="bikesales.html">Bike Sales - Data Analytics in Excel</a></li>
+												<li><a href="airbnbproject.html">AIRBNB Seattle Data Visualization In Tableau</a></li>
+												<li><a href="deloitte.html">Deloitte Data Analytics Job Simulation</a></li>
+												</ul>
+													
+												</li>
+									</ul>
+								</nav>
+
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Please contact me through any of the following.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">angeladinulos@gmail.com</a></li>
+										<li class="icon solid fa-phone">(+34) 637 85 45 93</li>
+										<li class="icon solid fa-home">Philippines | Spain<br />
+										</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
